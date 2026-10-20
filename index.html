@@ -2,19 +2,58 @@
 <html lang="gu" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) - 365 દિવસ અબોલ જીવ સેવા | સેવા • શ્રદ્ધા • વિશ્વાસ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) - 365 દિવસ અબોલ જીવ સેવા</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts for Clean Gujarati Typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
             font-family: 'Noto Sans Gujarati', 'Poppins', sans-serif;
-            overflow-x: hidden;
+            overflow-x: hidden !important;
+            width: 100%;
+            margin: 0;
+            padding: 0;
             background-color: #fafaf9;
+        }
+        /* Strict Logo Size Lock so it NEVER blows up on Mobile */
+        .nav-logo-lock {
+            width: 46px !important;
+            height: 46px !important;
+            min-width: 46px !important;
+            min-height: 46px !important;
+            max-width: 46px !important;
+            max-height: 46px !important;
+            object-fit: cover;
+            border-radius: 9999px;
+        }
+        @media (min-width: 640px) {
+            .nav-logo-lock {
+                width: 56px !important;
+                height: 56px !important;
+                min-width: 56px !important;
+                min-height: 56px !important;
+                max-width: 56px !important;
+                max-height: 56px !important;
+            }
+        }
+        .hero-logo-lock {
+            width: 105px !important;
+            height: 105px !important;
+            object-fit: cover;
+            border-radius: 9999px;
+        }
+        @media (min-width: 640px) {
+            .hero-logo-lock {
+                width: 130px !important;
+                height: 130px !important;
+            }
         }
         /* Rich Multi-Tone Hero Background */
         .hero-bg {
@@ -27,11 +66,12 @@
         .marquee-wrapper {
             overflow: hidden;
             white-space: nowrap;
+            width: 100%;
             position: relative;
         }
         .marquee-content {
             display: inline-block;
-            animation: marquee 38s linear infinite;
+            animation: marquee 35s linear infinite;
         }
         .marquee-wrapper:hover .marquee-content {
             animation-play-state: paused;
@@ -42,75 +82,66 @@
         }
         /* Smooth Card Animations */
         .trust-card {
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
         .trust-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 30px -10px rgba(6, 78, 59, 0.18), 0 10px 15px -5px rgba(234, 88, 12, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(6, 78, 59, 0.15), 0 8px 10px -6px rgba(234, 88, 12, 0.1);
         }
         .img-zoom {
-            transition: transform 0.6s ease;
+            transition: transform 0.5s ease;
         }
         .trust-card:hover .img-zoom {
-            transform: scale(1.07);
-        }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ea580c;
-            border-radius: 5px;
+            transform: scale(1.06);
         }
     </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
 
-    <!-- 1. TOP LIVE MARQUEE BAR (Hover to Pause) -->
-    <div class="bg-gradient-to-r from-emerald-950 via-orange-800 to-emerald-950 text-white py-2.5 shadow-md border-b border-amber-400/40 marquee-wrapper cursor-pointer" title="ઉભા રાખવા માટે અહીં ટચ કરો અથવા માઉસ મૂકો">
+    <!-- 1. TOP LIVE MARQUEE BAR -->
+    <div class="bg-gradient-to-r from-emerald-950 via-orange-800 to-emerald-950 text-white py-2 shadow-md border-b border-amber-400/40 marquee-wrapper cursor-pointer">
         <div class="marquee-content text-xs sm:text-sm font-bold tracking-wide">
-            <span class="mx-5">🐾 🙏 જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) — સેવા • શ્રદ્ધા • વિશ્વાસ</span>
-            <span class="mx-5 text-amber-300">🐕 શ્વાનોને પૌષ્ટિક શીરો, દૂધ અને રોટલી સેવા</span>
-            <span class="mx-5 text-emerald-300">💊 ખંજવાળ અને ચામડીના રોગવાળા પશુઓને નિઃશુલ્ક દવા સેવા</span>
-            <span class="mx-5 text-orange-200">🐒 વાંદરાઓને તાજા કેળા, ફ્રૂટ અને રોટલી સેવા</span>
-            <span class="mx-5 text-amber-300">🕊️ કબૂતર, ચકલી અને પક્ષીઓને રોજ સવારે ચણ-દાણા</span>
-            <span class="mx-5 text-emerald-300">🏡 ચકલીના માળા (ઘરડી) અને ઉનાળામાં પાણીના કુંડાનું વિતરણ</span>
-            <span class="mx-5 text-yellow-300">✨ ₹10, ₹20, ₹50 ની સેવા પણ 100% સાચા માર્ગે — દરેક સેવકનું નામ અને વિડિયો Instagram (@jivsevak) પર મુકાશે!</span>
+            <span class="mx-4">🐾 🙏 જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) — સેવા • શ્રદ્ધા • વિશ્વાસ</span>
+            <span class="mx-4 text-amber-300">🐕 શ્વાનોને પૌષ્ટિક શીરો, દૂધ અને રોટલી સેવા</span>
+            <span class="mx-4 text-emerald-300">💊 ખંજવાળ અને ચામડીના રોગવાળા પશુઓને નિઃશુલ્ક દવા સેવા</span>
+            <span class="mx-4 text-orange-200">🐒 વાંદરાઓને તાજા કેળા, ફ્રૂટ અને રોટલી સેવા</span>
+            <span class="mx-4 text-amber-300">🕊️ કબૂતર, ચકલી અને પક્ષીઓને રોજ સવારે ચણ-દાણા</span>
+            <span class="mx-4 text-emerald-300">🏡 ચકલીના માળા (ઘરડી) અને ઉનાળામાં પાણીના કુંડાનું વિતરણ</span>
+            <span class="mx-4 text-yellow-300">✨ ₹10, ₹20, ₹50 ની સેવા પણ 100% સાચા માર્ગે — દરેક સેવકનું નામ અને વિડિયો Instagram (@jivsevak) પર મુકાશે!</span>
             <!-- Duplicate for Seamless Loop -->
-            <span class="mx-5">🐾 🙏 જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) — સેવા • શ્રદ્ધા • વિશ્વાસ</span>
-            <span class="mx-5 text-amber-300">🐕 શ્વાનોને પૌષ્ટિક શીરો, દૂધ અને રોટલી સેવા</span>
-            <span class="mx-5 text-emerald-300">💊 ખંજવાળ અને ચામડીના રોગવાળા પશુઓને નિઃશુલ્ક દવા સેવા</span>
+            <span class="mx-4">🐾 🙏 જીવસેવક પરિવાર ટ્રસ્ટ (JivSevak Family) — સેવા • શ્રદ્ધા • વિશ્વાસ</span>
+            <span class="mx-4 text-amber-300">🐕 શ્વાનોને પૌષ્ટિક શીરો, દૂધ અને રોટલી સેવા</span>
         </div>
     </div>
 
-    <!-- 2. STICKY PROFESSIONAL TRUST HEADER -->
-    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-orange-100">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Brand Logo & Name -->
-            <a href="#home" class="flex items-center space-x-3 group">
+    <!-- 2. STICKY RESPONSIVE HEADER (FIXED FOR MOBILE & PC) -->
+    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-orange-100 w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex justify-between items-center gap-2">
+            
+            <!-- Brand Logo & Name (Protected with Flex-1 & Min-W-0) -->
+            <a href="#home" class="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                 <img src="jivsevaklogo.jpg" 
-                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Jiv+Sevak&background=ea580c&color=fff&size=128&bold=true';" 
+                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff&size=128&bold=true';" 
                      alt="JivSevak Logo" 
-                     class="w-13 h-13 sm:w-16 sm:h-16 rounded-full object-cover shadow-md border-2 border-orange-500 group-hover:scale-105 transition">
-                <div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-xl sm:text-2xl md:text-3xl font-black text-emerald-900 tracking-tight">જીવસેવક પરિવાર</span>
-                        <span class="hidden sm:inline-block bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-emerald-300">
+                     class="nav-logo-lock shadow-md border-2 border-orange-500 flex-shrink-0">
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-lg sm:text-2xl md:text-3xl font-black text-emerald-900 leading-tight truncate">જીવસેવક પરિવાર</span>
+                        <span class="hidden md:inline-block bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-emerald-300">
                             ✓ 100% પારદર્શક ટ્રસ્ટ
                         </span>
                     </div>
-                    <span class="text-xs sm:text-sm text-orange-600 font-bold block">🙏 સેવા • 💖 શ્રદ્ધા • 🤝 વિશ્વાસ (365 દિવસ જીવદયા)</span>
+                    <span class="text-[11px] sm:text-xs text-orange-600 font-bold block truncate">
+                        🙏 સેવા • 💖 શ્રદ્ધા • 🤝 વિશ્વાસ (365 દિવસ)
+                    </span>
                 </div>
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden xl:flex space-x-5 font-bold text-slate-700 items-center text-sm">
+            <nav class="hidden xl:flex space-x-5 font-bold text-slate-700 items-center text-sm flex-shrink-0">
                 <a href="#home" class="hover:text-orange-600 transition">મુખ્ય પૃષ્ઠ</a>
                 <a href="#goals" class="hover:text-orange-600 transition">૩ મુખ્ય ગોલ</a>
-                <a href="#steps" class="hover:text-orange-600 transition">ટ્રસ્ટની કાર્યપદ્ધતિ</a>
+                <a href="#steps" class="hover:text-orange-600 transition">કાર્યપદ્ધતિ</a>
                 <a href="#sevas" class="hover:text-orange-600 transition">તમામ જીવસેવા</a>
                 <a href="#future" class="hover:text-orange-600 transition">ભવિષ્યનું વિઝન</a>
                 <a href="#qrcode-section" class="bg-amber-100 text-orange-800 px-3.5 py-2 rounded-full hover:bg-amber-200 transition border border-amber-300">
@@ -121,170 +152,167 @@
                 </a>
             </nav>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Menu" class="xl:hidden text-emerald-950 text-2xl focus:outline-none p-2 rounded-lg hover:bg-orange-50">
-                <i class="fa-solid fa-bars"></i>
+            <!-- Mobile Hamburger Button (Never Overlaps) -->
+            <button id="menu-btn" aria-label="Menu" class="xl:hidden bg-orange-50 text-emerald-950 w-10 h-10 rounded-xl flex items-center justify-center border border-orange-200 focus:outline-none flex-shrink-0 shadow-sm">
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
         <!-- Mobile Dropdown Navigation -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-slate-100 px-5 py-4 space-y-3 shadow-2xl font-bold text-base">
-            <a href="#home" class="mobile-link block text-slate-800 hover:text-orange-600 py-1.5 border-b border-slate-100">🏠 મુખ્ય પૃષ્ઠ</a>
-            <a href="#goals" class="mobile-link block text-slate-800 hover:text-orange-600 py-1.5 border-b border-slate-100">🎯 અમારા ૩ મુખ્ય ગોલ</a>
-            <a href="#steps" class="mobile-link block text-emerald-800 hover:text-orange-600 py-1.5 border-b border-slate-100">📋 સ્ટેપ-બાય-સ્ટેપ ટ્રસ્ટ કાર્યપદ્ધતિ</a>
-            <a href="#sevas" class="mobile-link block text-slate-800 hover:text-orange-600 py-1.5 border-b border-slate-100">🐾 આપણી તમામ અબોલ જીવ સેવાઓ</a>
-            <a href="#future" class="mobile-link block text-slate-800 hover:text-orange-600 py-1.5 border-b border-slate-100">🏛️ ગૌશાળા અને ભવિષ્યનું વિઝન</a>
-            <a href="#qrcode-section" class="mobile-link block text-orange-600 py-1.5 border-b border-slate-100">📲 QR Code સેવા (₹10, ₹20, ₹50)</a>
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2.5 shadow-2xl font-bold text-sm">
+            <a href="#home" class="mobile-link block text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100">🏠 મુખ્ય પૃષ્ઠ</a>
+            <a href="#goals" class="mobile-link block text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100">🎯 અમારા ૩ મુખ્ય ગોલ (ચકલી માળા & પશુ સેવા)</a>
+            <a href="#steps" class="mobile-link block text-emerald-800 hover:text-orange-600 py-2 border-b border-slate-100">📋 સ્ટેપ-બાય-સ્ટેપ ટ્રસ્ટ કાર્યપદ્ધતિ</a>
+            <a href="#sevas" class="mobile-link block text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100">🐾 આપણી તમામ અબોલ જીવ સેવાઓ</a>
+            <a href="#future" class="mobile-link block text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100">🏛️ ગૌશાળા અને ભવિષ્યનું વિઝન</a>
+            <a href="#qrcode-section" class="mobile-link block text-orange-600 py-2 border-b border-slate-100">📲 QR Code સેવા (₹10, ₹20, ₹50)</a>
             <a href="#join" class="mobile-link block bg-gradient-to-r from-orange-600 to-amber-500 text-white text-center py-3 rounded-xl font-extrabold shadow-md mt-2">🙏 જીવસેવક પરિવારમાં જોડાવો</a>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION (Multi-Animal Theme + Emotional Slogans + All Animal Pills) -->
-    <section id="home" class="hero-bg text-white py-14 md:py-24 px-4 text-center relative overflow-hidden">
-        <div class="container mx-auto max-w-5xl relative z-10">
+    <!-- 3. HERO SECTION (100% Mobile & PC Responsive) -->
+    <section id="home" class="hero-bg text-white py-10 sm:py-20 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
             
-            <!-- Center Official Logo with Trust Glow -->
-            <div class="flex justify-center mb-6">
-                <div class="p-1.5 bg-gradient-to-tr from-orange-500 via-amber-300 to-emerald-500 rounded-full shadow-2xl">
+            <!-- Center Official Logo -->
+            <div class="flex justify-center mb-5">
+                <div class="p-1.5 bg-gradient-to-tr from-orange-500 via-amber-300 to-emerald-500 rounded-full shadow-2xl inline-block">
                     <img src="jivsevaklogo.jpg" 
-                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Jiv+Sevak&background=ea580c&color=fff&size=160&bold=true';" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff&size=160&bold=true';" 
                          alt="JivSevak Family Official Logo" 
-                         class="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-white">
+                         class="hero-logo-lock border-4 border-white">
                 </div>
             </div>
 
             <!-- Trust Tagline Badge -->
-            <div class="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-md text-amber-300 text-xs sm:text-base font-extrabold px-5 py-2 rounded-full mb-6 border border-amber-400/50 shadow-lg">
-                <span>🌟 ગુજરાતના દરેક City અને ગામડામાં ચાલતું નિઃસ્વાર્થ જીવદયા અભિયાન 🌟</span>
+            <div class="inline-block bg-amber-500/20 backdrop-blur-md text-amber-300 text-xs sm:text-base font-extrabold px-4 py-2 rounded-2xl mb-5 border border-amber-400/50 shadow-lg max-w-full">
+                🌟 ગુજરાતના દરેક City અને ગામડામાં ચાલતું નિઃસ્વાર્થ જીવદયા અભિયાન 🌟
             </div>
 
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight drop-shadow-md">
+            <h1 class="text-2xl sm:text-5xl md:text-6xl font-black mb-4 leading-snug sm:leading-tight drop-shadow-md">
                 બેજુબાન જીવોની આંતરડી ઠારતું<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-yellow-200">
-                    વિશ્વાસ અને કર્મનું પવિત્ર મંદિર!
-                </span>
+                <span class="text-amber-300">વિશ્વાસ અને કર્મનું પવિત્ર મંદિર!</span>
             </h1>
 
-            <p class="text-base sm:text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-sm sm:text-xl text-slate-200 mb-6 max-w-3xl mx-auto leading-relaxed px-1">
                 જે અબોલ પશુ-પક્ષીઓ પોતાની ભૂખ કે વેદના બોલીને કહી શકતા નથી, તેમની સેવા કરવી એ જ સાચો ધર્મ છે. અહીં આપેલા <strong>૧૦ રૂપિયા પણ ૧૦૦% સાચા માર્ગે</strong> જ વપરાય છે. એકવાર જીવસેવક પરિવાર સાથે જોડાઈ જુઓ — મૂગા જીવોના આશીર્વાદથી તમારા ઘર, પરિવાર અને ધંધામાં સુખ-શાંતિ અને બરકતનો અનુભવ થશે!
             </p>
 
-            <!-- All Abol Jiv Floating Badges inside Hero -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-9 max-w-3xl mx-auto">
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-200">🐕 શ્વાન શીરો-દૂધ</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-emerald-200">🐄 ગૌમાતા ઘાસચારો</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-orange-200">🐒 વાનર કેળા-ફ્રૂટ</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-sky-200">🐦 ચકલીના માળા</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-purple-200">🕊️ કબૂતર-પક્ષી ચણ</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-pink-200">💊 મેડિકલ સારવાર</span>
-                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-yellow-200">🐿️ ખિસકોલી-મોર દાણા</span>
+            <!-- All Abol Jiv Floating Badges -->
+            <div class="flex flex-wrap justify-center gap-2 mb-7 max-w-3xl mx-auto">
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-amber-200">🐕 શ્વાન શીરો-દૂધ</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-emerald-200">🐄 ગૌમાતા ઘાસચારો</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-orange-200">🐒 વાનર કેળા-ફ્રૂટ</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-sky-200">🐦 ચકલીના માળા</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-purple-200">🕊️ કબૂતર-પક્ષી ચણ</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-pink-200">💊 મેડિકલ સારવાર</span>
+                <span class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs sm:text-sm font-bold text-yellow-200">🐿️ ખિસકોલી-મોર દાણા</span>
             </div>
 
             <!-- Deep Emotional Quote Box -->
-            <div class="bg-slate-950/60 backdrop-blur-md border-l-4 border-amber-400 p-5 sm:p-6 rounded-2xl max-w-2xl mx-auto mb-10 text-left shadow-2xl">
-                <p class="text-amber-300 font-bold text-base sm:text-lg italic leading-relaxed mb-1">
+            <div class="bg-slate-950/65 backdrop-blur-md border-l-4 border-amber-400 p-4 sm:p-6 rounded-2xl max-w-2xl mx-auto mb-8 text-left shadow-2xl">
+                <p class="text-amber-300 font-bold text-sm sm:text-lg italic leading-relaxed mb-1">
                     "પથ્થરની મૂર્તિને છપ્પન ભોગ ધરાવવા કરતાં, શેરીમાં તરફડતા એક ભૂખ્યા અબોલ જીવને રોટલી કે મુઠ્ઠી દાણા નાખશો તો પરમાત્માના સીધા આશીર્વાદ મળશે!"
                 </p>
                 <span class="text-xs text-slate-300 block text-right font-semibold">— જીવસેવક પરિવારનો કર્મ સંદેશ 🐾</span>
             </div>
 
             <!-- Main Action Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#join" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-black py-4 px-8 rounded-full shadow-2xl transition text-base sm:text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-handshake-angle text-xl"></i> તમારા ગામ/City ની ટીમમાં જોડાવો
+            <div class="flex flex-col sm:flex-row justify-center gap-3.5 max-w-md sm:max-w-none mx-auto">
+                <a href="#join" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-black py-3.5 px-7 rounded-full shadow-2xl transition text-sm sm:text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-handshake-angle"></i> તમારા ગામ/City ની ટીમમાં જોડાવો
                 </a>
-                <a href="#qrcode-section" class="bg-emerald-700 hover:bg-emerald-800 border-2 border-emerald-400 text-white font-black py-4 px-8 rounded-full shadow-2xl transition text-base sm:text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-qrcode text-xl"></i> ₹10 / ₹20 / ₹50 પારદર્શક સેવા
+                <a href="#qrcode-section" class="bg-emerald-700 hover:bg-emerald-800 border-2 border-emerald-400 text-white font-black py-3.5 px-7 rounded-full shadow-2xl transition text-sm sm:text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-qrcode"></i> ₹10 / ₹20 / ₹50 પારદર્શક સેવા
                 </a>
             </div>
         </div>
     </section>
 
     <!-- 4. TRUST IMPACT COUNTER BAR -->
-    <section class="bg-emerald-950 text-white py-8 border-y-4 border-orange-500 shadow-inner">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-2 border-r border-emerald-800/80 last:border-none">
-                    <div class="text-3xl sm:text-4xl font-black text-amber-400 mb-1">365 દિવસ</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">અવિરત અબોલ જીવ સેવા</div>
+    <section class="bg-emerald-950 text-white py-6 sm:py-8 border-y-4 border-orange-500">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+                <div class="p-2 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <div class="text-2xl sm:text-4xl font-black text-amber-400 mb-0.5">365 દિવસ</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">અવિરત જીવ સેવા</div>
                 </div>
-                <div class="p-2 border-r border-emerald-800/80 last:border-none">
-                    <div class="text-3xl sm:text-4xl font-black text-orange-400 mb-1">14.7K+</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">Instagram જીવસેવક પરિવાર</div>
+                <div class="p-2 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <div class="text-2xl sm:text-4xl font-black text-orange-400 mb-0.5">14.7K+</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">Instagram પરિવાર</div>
                 </div>
-                <div class="p-2 border-r border-emerald-800/80 last:border-none">
-                    <div class="text-3xl sm:text-4xl font-black text-emerald-400 mb-1">8.2 લાખ+</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">માસિક પ્રેરણાદાયી Views</div>
+                <div class="p-2 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <div class="text-2xl sm:text-4xl font-black text-emerald-400 mb-0.5">8.2 લાખ+</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">માસિક Views</div>
                 </div>
-                <div class="p-2">
-                    <div class="text-3xl sm:text-4xl font-black text-yellow-300 mb-1">100%</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">પારદર્શક વહીવટ અને વિશ્વાસ</div>
+                <div class="p-2 bg-emerald-900/50 rounded-2xl border border-emerald-800">
+                    <div class="text-2xl sm:text-4xl font-black text-yellow-300 mb-0.5">100%</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-semibold">પારદર્શક ટ્રસ્ટ</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. OUR 3 CORE GOALS (FIXED GOAL-2 IMAGE + GUARANTEED FALLBACKS) -->
-    <section id="goals" class="py-16 md:py-24 px-4 container mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="bg-orange-100 text-orange-800 font-extrabold uppercase tracking-wider text-xs sm:text-sm px-4 py-1.5 rounded-full border border-orange-300">
-                🎯 અમારા મુખ્ય ૩ ધ્યેય (3 Core Pillars of Trust)
+    <!-- 5. OUR 3 CORE GOALS (100% Working Images on Mobile & PC) -->
+    <section id="goals" class="py-14 sm:py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-orange-100 text-orange-800 font-extrabold uppercase tracking-wider text-xs sm:text-sm px-4 py-1.5 rounded-full border border-orange-300 inline-block">
+                🎯 અમારા મુખ્ય ૩ ધ્યેય (3 Core Goals)
             </span>
-            <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mt-4 mb-4">
+            <h2 class="text-2xl sm:text-5xl font-black text-slate-900 mt-3 mb-3">
                 જીવસેવક પરિવારના ૩ મહા-સંકલ્પ
             </h2>
-            <p class="text-slate-600 text-base sm:text-lg">
+            <p class="text-slate-600 text-sm sm:text-lg">
                 ગુજરાતના દરેક ઘર, સોસાયટી અને ગામડામાં આ ત્રણ મુખ્ય સેવાઓ કાયમી ધોરણે ચાલે તે માટે અમારું ટ્રસ્ટ કટિબદ્ધ છે:
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
             
             <!-- GOAL 1: Chakli na Mala & Kunda -->
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl trust-card border-2 border-orange-200 flex flex-col relative">
-                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white font-extrabold px-4 py-1.5 rounded-full shadow-lg text-xs sm:text-sm">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg trust-card border-2 border-orange-200 flex flex-col relative">
+                <div class="absolute top-3 left-3 z-10 bg-orange-600 text-white font-extrabold px-3.5 py-1 rounded-full shadow-md text-xs sm:text-sm">
                     મુખ્ય ગોલ - ૧ 🏡
                 </div>
-                <div class="overflow-hidden h-64 bg-orange-100 relative">
+                <div class="overflow-hidden h-56 sm:h-64 bg-orange-100 relative">
                     <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80" 
-                         onerror="this.onerror=null; this.src='https://picsum.photos/seed/sparrowbird/800/500';" 
+                         onerror="this.onerror=null; this.src='https://picsum.photos/seed/sparrow1/800/500';" 
                          alt="ચકલીના માળા અને પાણીના કુંડા" 
                          class="w-full h-full object-cover img-zoom">
                 </div>
-                <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-orange-50/50">
+                <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-orange-50/50">
                     <div>
-                        <h3 class="text-2xl font-black mb-3 text-emerald-950">૧. ચકલીના માળા (ઘરડી) અને પાણીના કુંડા</h3>
+                        <h3 class="text-xl sm:text-2xl font-black mb-2.5 text-emerald-950">૧. ચકલીના માળા (ઘરડી) અને પાણીના કુંડા</h3>
                         <p class="text-slate-700 leading-relaxed mb-4 text-sm sm:text-base">
                             સિમેન્ટના જંગલોમાં લુપ્ત થતી ચકલીઓને બચાવવા માટે દરેક ઘરની બાલ્કની, ફળિયા અને વૃક્ષો પર <strong>સુરક્ષિત ચકલીના માળા (Bird Houses)</strong> લગાવવા અને કાળઝાળ ગરમીમાં પક્ષીઓ માટે માટીના પાણીના કુંડાનું નિઃશુલ્ક વિતરણ કરવું.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-orange-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-orange-700">
-                        <span>🐦 ચકલી બચાવો મહા-અભિયાન</span>
+                    <div class="pt-3.5 border-t border-orange-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-orange-700">
+                        <span>🐦 ચકલી બચાવો અભિયાન</span>
                         <span class="bg-orange-100 px-3 py-1 rounded-full">365 દિવસ ચાલુ</span>
                     </div>
                 </div>
             </div>
 
-            <!-- GOAL 2: FIXED IMAGE (Pigeons & Birds Feeding Grain) -->
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl trust-card border-2 border-emerald-300 flex flex-col relative">
-                <div class="absolute top-4 left-4 z-10 bg-emerald-700 text-white font-extrabold px-4 py-1.5 rounded-full shadow-lg text-xs sm:text-sm">
+            <!-- GOAL 2: Birds Feeding Grain -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg trust-card border-2 border-emerald-300 flex flex-col relative">
+                <div class="absolute top-3 left-3 z-10 bg-emerald-700 text-white font-extrabold px-3.5 py-1 rounded-full shadow-md text-xs sm:text-sm">
                     મુખ્ય ગોલ - ૨ 🌾
                 </div>
-                <div class="overflow-hidden h-64 bg-emerald-100 relative">
-                    <!-- 100% Working Verified High-Speed Bird/Pigeon Image + Automatic Fallback -->
+                <div class="overflow-hidden h-56 sm:h-64 bg-emerald-100 relative">
                     <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=800&q=80" 
-                         onerror="this.onerror=null; this.src='https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&w=800';" 
+                         onerror="this.onerror=null; this.src='https://picsum.photos/seed/pigeonbird/800/500';" 
                          alt="ચકલી, કબૂતર અને પક્ષીઓને રોજ દાણા" 
                          class="w-full h-full object-cover img-zoom">
                 </div>
-                <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-emerald-50/50">
+                <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-emerald-50/50">
                     <div>
-                        <h3 class="text-2xl font-black mb-3 text-emerald-950">૨. ચકલી, કબૂતર અને પક્ષીઓને રોજ ચણ-દાણા</h3>
+                        <h3 class="text-xl sm:text-2xl font-black mb-2.5 text-emerald-950">૨. ચકલી, કબૂતર અને પક્ષીઓને રોજ ચણ-દાણા</h3>
                         <p class="text-slate-700 leading-relaxed mb-4 text-sm sm:text-base">
                             આકાશમાં ઉડતા પક્ષીઓ કોઈની પાસે હાથ લાંબો નથી કરી શકતા. અમારો બીજો ગોલ રોજ સવારે ચકલી, કબૂતર, પોપટ, મોર અને ખિસકોલીઓ માટે પૌષ્ટિક ચણ (બાજરી, જુવાર, ચોખા, ચણા) નાખવાનો છે. <strong>"નાનો દાણો, મોટું પુણ્ય!"</strong>
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-emerald-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-emerald-800">
+                    <div class="pt-3.5 border-t border-emerald-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-emerald-800">
                         <span>🕊️ નિત્ય પક્ષી ચણ સેવા</span>
                         <span class="bg-emerald-100 px-3 py-1 rounded-full">રોજ સવારે નિયમિત</span>
                     </div>
@@ -292,24 +320,24 @@
             </div>
 
             <!-- GOAL 3: Pashu Bhojan, Medical & Future Gaushala -->
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl trust-card border-2 border-amber-300 flex flex-col relative">
-                <div class="absolute top-4 left-4 z-10 bg-amber-600 text-white font-extrabold px-4 py-1.5 rounded-full shadow-lg text-xs sm:text-sm">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg trust-card border-2 border-amber-300 flex flex-col relative">
+                <div class="absolute top-3 left-3 z-10 bg-amber-600 text-white font-extrabold px-3.5 py-1 rounded-full shadow-md text-xs sm:text-sm">
                     મુખ્ય ગોલ - ૩ 🐄🐕
                 </div>
-                <div class="overflow-hidden h-64 bg-amber-100 relative">
+                <div class="overflow-hidden h-56 sm:h-64 bg-amber-100 relative">
                     <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80" 
                          onerror="this.onerror=null; this.src='https://picsum.photos/seed/cowseva/800/500';" 
                          alt="પશુઓને ભોજન અને ગૌશાળા" 
                          class="w-full h-full object-cover img-zoom">
                 </div>
-                <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-amber-50/50">
+                <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-gradient-to-b from-white to-amber-50/50">
                     <div>
-                        <h3 class="text-2xl font-black mb-3 text-emerald-950">૩. પશુઓને ભોજન, દવા અને ભવિષ્યની ગૌશાળા</h3>
+                        <h3 class="text-xl sm:text-2xl font-black mb-2.5 text-emerald-950">૩. પશુઓને ભોજન, દવા અને ભવિષ્યની ગૌશાળા</h3>
                         <p class="text-slate-700 leading-relaxed mb-4 text-sm sm:text-base">
                             શેરીના શ્વાનોને શીરો-દૂધ અને ખંજવાળની દવા, વાંદરાઓને કેળા-ફ્રૂટ અને ગૌમાતાને લીલો ઘાસચારો ખવડાવવો. આપણા સૌના સાથ-સહકારથી ધીમે-ધીમે <strong>આપણી પોતાની ગૌશાળા અને પશુ આશ્રમ</strong> શરૂ કરવાનો આપણો ભગીરથ ગોલ છે!
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-amber-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-amber-800">
+                    <div class="pt-3.5 border-t border-amber-200 flex items-center justify-between text-xs sm:text-sm font-extrabold text-amber-800">
                         <span>🐄 ગૌસેવા & પશુ રક્ષા</span>
                         <span class="bg-amber-100 px-3 py-1 rounded-full">મહા-સંકલ્પ</span>
                     </div>
@@ -319,178 +347,163 @@
         </div>
     </section>
 
-    <!-- 6. STEP-BY-STEP HOW OUR TRUST WORKS (Professional 4-Step Flow) -->
-    <section id="steps" class="py-16 bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 text-white px-4">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="bg-amber-400 text-slate-950 font-black uppercase tracking-wider text-xs sm:text-sm px-4 py-1.5 rounded-full">
-                    📋 સ્ટેપ-બાય-સ્ટેપ સેવા પ્રણાલી (How It Works)
+    <!-- 6. STEP-BY-STEP HOW OUR TRUST WORKS -->
+    <section id="steps" class="py-14 sm:py-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 text-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-amber-400 text-slate-950 font-black uppercase tracking-wider text-xs sm:text-sm px-4 py-1.5 rounded-full inline-block">
+                    📋 સ્ટેપ-બાય-સ્ટેપ સેવા પ્રણાલી
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-4 mb-3">
+                <h2 class="text-2xl sm:text-4xl font-black mt-3 mb-2">
                     જીવસેવક પરિવારમાં સેવા કેવી રીતે થાય છે?
                 </h2>
-                <p class="text-emerald-100 text-base sm:text-lg">
-                    અમારી કામગીરી એકદમ સરળ, વ્યવસ્થિત અને ૧૦૦% પારદર્શક છે. તમે આ ૪ રીતે જોડાઈ શકો છો:
+                <p class="text-emerald-100 text-sm sm:text-lg">
+                    અમારી કામગીરી એકદમ સરળ, વ્યવસ્થિત અને ૧૦૦% પારદર્શક છે:
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Step 1 -->
-                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6 relative hover:bg-white/15 transition">
-                    <div class="w-12 h-12 bg-orange-500 text-white font-black text-xl rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                        ૧
-                    </div>
-                    <h3 class="text-xl font-bold text-amber-300 mb-2">સ્ટેપ ૧: પરિવારમાં જોડાવો</h3>
-                    <p class="text-sm text-emerald-100 leading-relaxed">
-                        તમારા ગામ કે City ના WhatsApp ગ્રુપમાં જોડાવો અથવા વેબસાઇટનું રજીસ્ટ્રેશન ફોર્મ ભરીને જીવસેવક સભ્ય બનો.
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6">
+                    <div class="w-11 h-11 bg-orange-500 text-white font-black text-lg rounded-2xl flex items-center justify-center mb-3 shadow-lg">૧</div>
+                    <h3 class="text-lg font-bold text-amber-300 mb-1.5">સ્ટેપ ૧: પરિવારમાં જોડાવો</h3>
+                    <p class="text-xs sm:text-sm text-emerald-100 leading-relaxed">
+                        તમારા ગામ કે City ના WhatsApp ગ્રુપમાં જોડાવો અથવા વેબસાઇટનું રજીસ્ટ્રેશન ફોર્મ ભરીને સભ્ય બનો.
                     </p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6 relative hover:bg-white/15 transition">
-                    <div class="w-12 h-12 bg-amber-500 text-slate-950 font-black text-xl rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                        ૨
-                    </div>
-                    <h3 class="text-xl font-bold text-amber-300 mb-2">સ્ટેપ ૨: ઘર પાસે સેવા અથવા દાન</h3>
-                    <p class="text-sm text-emerald-100 leading-relaxed">
-                        તમારા ઘરની આજુબાજુ બાળકોને સાથે રાખીને ફ્રીમાં રોટલી/દાણા નાખો, અથવા ₹10, ₹20, ₹50 નો નાનો આર્થિક સહયોગ આપો.
+                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6">
+                    <div class="w-11 h-11 bg-amber-500 text-slate-950 font-black text-lg rounded-2xl flex items-center justify-center mb-3 shadow-lg">૨</div>
+                    <h3 class="text-lg font-bold text-amber-300 mb-1.5">સ્ટેપ ૨: ઘર પાસે સેવા / દાન</h3>
+                    <p class="text-xs sm:text-sm text-emerald-100 leading-relaxed">
+                        ઘરની આજુબાજુ બાળકોને સાથે રાખીને ફ્રીમાં રોટલી/દાણા નાખો, અથવા ₹10, ₹20, ₹50 નો સહયોગ આપો.
                     </p>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6 relative hover:bg-white/15 transition">
-                    <div class="w-12 h-12 bg-emerald-500 text-white font-black text-xl rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                        ૩
-                    </div>
-                    <h3 class="text-xl font-bold text-amber-300 mb-2">સ્ટેપ ૩: ૧૦૦% સાચી જગ્યાએ ઉપયોગ</h3>
-                    <p class="text-sm text-emerald-100 leading-relaxed">
+                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6">
+                    <div class="w-11 h-11 bg-emerald-500 text-white font-black text-lg rounded-2xl flex items-center justify-center mb-3 shadow-lg">૩</div>
+                    <h3 class="text-lg font-bold text-amber-300 mb-1.5">સ્ટેપ ૩: ૧૦૦% સાચો ઉપયોગ</h3>
+                    <p class="text-xs sm:text-sm text-emerald-100 leading-relaxed">
                         તમારો એક-એક રૂપિયો શ્વાનના શીરા-દૂધ, ખંજવાળની દવા, વાંદરાના કેળા અને પક્ષીઓના ચણમાં જ વપરાય છે.
                     </p>
                 </div>
-
-                <!-- Step 4 -->
-                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6 relative hover:bg-white/15 transition">
-                    <div class="w-12 h-12 bg-pink-600 text-white font-black text-xl rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                        ૪
-                    </div>
-                    <h3 class="text-xl font-bold text-amber-300 mb-2">સ્ટેપ ૪: Instagram પર નામ & Reels</h3>
-                    <p class="text-sm text-emerald-100 leading-relaxed">
-                        તમારા નામ સાથેનો સેવાનો લાઈવ વિડિયો આપણા <strong>@jivsevak</strong> Instagram પર મૂકીને તમને સન્માન અને પ્રેરણા આપવામાં આવે છે!
+                <div class="bg-white/10 backdrop-blur-md border border-emerald-500/40 rounded-3xl p-6">
+                    <div class="w-11 h-11 bg-pink-600 text-white font-black text-lg rounded-2xl flex items-center justify-center mb-3 shadow-lg">૪</div>
+                    <h3 class="text-lg font-bold text-amber-300 mb-1.5">સ્ટેપ ૪: Instagram પર વિડિયો</h3>
+                    <p class="text-xs sm:text-sm text-emerald-100 leading-relaxed">
+                        તમારા નામ સાથેનો સેવાનો લાઈવ વિડિયો આપણા <strong>@jivsevak</strong> Instagram પર મૂકવામાં આવે છે!
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. ALL ABOL JIV SEVAS (Color-Coded Cards for Every Animal/Bird) -->
-    <section id="sevas" class="py-16 md:py-24 bg-stone-100 px-4">
-        <div class="container mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="bg-emerald-800 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase">
+    <!-- 7. ALL ABOL JIV SEVAS -->
+    <section id="sevas" class="py-14 sm:py-20 bg-stone-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-emerald-800 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase inline-block">
                     🐾 આપણી સંપૂર્ણ સેવા યાદી
                 </span>
-                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mt-3 mb-4">
+                <h2 class="text-2xl sm:text-5xl font-black text-slate-900 mt-3 mb-3">
                     આપણે કયા-કયા અબોલ જીવોની સેવા કરીએ છીએ?
                 </h2>
-                <p class="text-slate-600 text-base sm:text-lg">
-                    જીવસેવામાં આપણે એક પણ અબોલ જીવને બાકી નથી રાખ્યો! દરેક પશુ-પક્ષી માટે અલગ-અલગ પ્રકારની નિયમિત સેવાઓ:
+                <p class="text-slate-600 text-sm sm:text-lg">
+                    જીવસેવામાં આપણે એક પણ અબોલ જીવને બાકી નથી રાખ્યો:
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Card 1: Dogs Shiro & Milk (Orange Theme) -->
+                <!-- Card 1 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-orange-500">
-                    <div class="overflow-hidden h-56 relative bg-orange-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-orange-100">
                         <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/dog1/800/500';" 
                              alt="શ્વાન શીરો અને દૂધ સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-orange-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">શ્વાન ભોજન 🐕</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૧. કૂતરાઓને પૌષ્ટિક શીરો, દૂધ અને રોટલી</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            શેરીના ભૂખ્યા શ્વાનો અને નાના ગલુડિયાઓ માટે શુદ્ધ ઘી-ગોળનો શીરો બનાવીને ખવડાવવો, રોજ સવાર-સાંજ દૂધ અને રોટલી પિવડાવીને તેમની ભૂખ સંતોષવી.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૧. કૂતરાઓને પૌષ્ટિક શીરો, દૂધ અને રોટલી</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            શેરીના ભૂખ્યા શ્વાનો અને નાના ગલુડિયાઓ માટે શુદ્ધ ઘી-ગોળનો શીરો બનાવીને ખવડાવવો, રોજ સવાર-સાંજ દૂધ અને રોટલી પિવડાવવી.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 2: Dog Medical & Skin Treatment (Red Theme) -->
+                <!-- Card 2 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-red-500">
-                    <div class="overflow-hidden h-56 relative bg-red-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-red-100">
                         <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/vetdog/800/500';" 
                              alt="ખંજવાળ અને રોગની દવા સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">મેડિકલ સારવાર 💊</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૨. ખંજવાળના રોગની દવા અને સારવાર</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            કૂતરાઓને ખંજવાળનો રોગ (Skin Infection) થાય કે ઈજા પહોંચે ત્યારે તેમને ખોરાકમાં દવાઓ આપવી, મલમ લગાવવો અને સંપૂર્ણ સાજા કરવાની મેડિકલ સેવા.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૨. ખંજવાળના રોગની દવા અને સારવાર</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            કૂતરાઓને ખંજવાળનો રોગ (Skin Infection) થાય કે ઈજા પહોંચે ત્યારે તેમને ખોરાકમાં દવાઓ આપવી અને મલમ લગાવી સાજા કરવા.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 3: Monkeys Bananas & Fruits (Amber Theme) -->
+                <!-- Card 3 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-amber-500">
-                    <div class="overflow-hidden h-56 relative bg-amber-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-amber-100">
                         <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/monkey1/800/500';" 
                              alt="વાંદરાઓને કેળા અને ફ્રૂટ સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-amber-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">વાનર સેવા 🐒</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૩. વાંદરાઓને તાજા કેળા, ફ્રૂટ અને રોટલી</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            વાનર રાજ (વાંદરાઓ) માટે તાજા કેળા, સફરજન, તરબૂચ જેવા ફળો અને ગરમા-ગરમ રોટલીઓ લઈ જઈને પ્રેમથી ખવડાવવાની અવિરત સેવા.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૩. વાંદરાઓને તાજા કેળા, ફ્રૂટ અને રોટલી</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            વાનર રાજ (વાંદરાઓ) માટે તાજા કેળા, સફરજન, તરબૂચ જેવા ફળો અને ગરમા-ગરમ રોટલીઓ લઈ જઈને પ્રેમથી ખવડાવવાની સેવા.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 4: Pigeons & Birds Grain (Blue Theme) -->
+                <!-- Card 4 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-sky-500">
-                    <div class="overflow-hidden h-56 relative bg-sky-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-sky-100">
                         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/birds1/800/500';" 
                              alt="કબૂતર અને પક્ષી દાણા સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-sky-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">પક્ષી ચણ 🕊️</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૪. કબૂતર, ચકલી અને મોરને રોજ દાણા</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            હજારો કબૂતરો, ચકલીઓ, પોપટ અને રાષ્ટ્રીય પક્ષી મોર માટે રોજ સવારે નિયમિત રીતે ચણા, બાજરી અને મકાઈના દાણા નાખવાની પવિત્ર સેવા.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૪. કબૂતર, ચકલી અને મોરને રોજ દાણા</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            હજારો કબૂતરો, ચકલીઓ, પોપટ અને રાષ્ટ્રીય પક્ષી મોર માટે રોજ સવારે નિયમિત રીતે ચણા, બાજરી અને મકાઈના દાણા નાખવા.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 5: Squirrels Special Feeding (Teal Theme) -->
+                <!-- Card 5 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-teal-500">
-                    <div class="overflow-hidden h-56 relative bg-teal-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-teal-100">
                         <img src="https://images.unsplash.com/photo-1507666405895-422eee7d517f?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/squirrel1/800/500';" 
                              alt="ખિસકોલી દાણા સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-teal-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">ખિસકોલી સેવા 🐿️</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૫. માસૂમ ખિસકોલીઓને દાણા અને ફળ</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            વૃક્ષો પર રહેતી નાની અને વ્હાલી ખિસકોલીઓ માટે ખાસ મગફળીના દાણા, ચોખા અને ફળો મૂકીને તેમની પ્રેમપૂર્વક કાળજી લેવામાં આવે છે.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૫. માસૂમ ખિસકોલીઓને દાણા અને ફળ</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            વૃક્ષો પર રહેતી નાની અને વ્હાલી ખિસકોલીઓ માટે ખાસ મગફળીના દાણા, ચોખા અને ફળો મૂકીને તેમની પ્રેમપૂર્વક કાળજી લેવી.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 6: Cows, Bulls & Elephants (Purple Theme) -->
+                <!-- Card 6 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md trust-card border-b-4 border-purple-600">
-                    <div class="overflow-hidden h-56 relative bg-purple-100">
+                    <div class="overflow-hidden h-52 sm:h-56 relative bg-purple-100">
                         <img src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&w=800&q=80" 
                              onerror="this.onerror=null; this.src='https://picsum.photos/seed/cow2/800/500';" 
                              alt="ગૌમાતા અને નંદી સેવા" class="w-full h-full object-cover img-zoom">
                         <span class="absolute top-3 right-3 bg-purple-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">ગૌસેવા 🐄🐘</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-black text-slate-900 mb-2">૬. ગૌમાતા, નંદી મહારાજ અને હાથી સેવા</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            રસ્તા પર ફરતી ગૌમાતા અને નંદી મહારાજને લીલો ઘાસચારો, ગોળ-રોટલી તેમજ હાથી અને બતક સહિતના તમામ જીવોને ભોજન કરાવવામાં આવે છે.
+                    <div class="p-5 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-black text-slate-900 mb-2">૬. ગૌમાતા, નંદી મહારાજ અને હાથી સેવા</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            રસ્તા પર ફરતી ગૌમાતા અને નંદી મહારાજને લીલો ઘાસચારો, ગોળ-રોટલી તેમજ હાથી સહિતના તમામ જીવોને ભોજન કરાવવું.
                         </p>
                     </div>
                 </div>
@@ -499,133 +512,110 @@
         </div>
     </section>
 
-    <!-- 8. FUTURE VISION & GAUSHALA SANKALP (Why Join Us in the Future) -->
-    <section id="future" class="py-16 md:py-24 px-4 container mx-auto">
-        <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 rounded-3xl p-8 sm:p-14 text-white shadow-2xl border-2 border-amber-400/50">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <!-- 8. FUTURE VISION & GAUSHALA SANKALP -->
+    <section id="future" class="py-14 sm:py-20 px-4 max-w-7xl mx-auto">
+        <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 rounded-3xl p-6 sm:p-12 text-white shadow-2xl border-2 border-amber-400/50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                    <span class="bg-amber-400 text-slate-950 text-xs sm:text-sm font-black px-4 py-1.5 rounded-full uppercase">
+                    <span class="bg-amber-400 text-slate-950 text-xs sm:text-sm font-black px-4 py-1.5 rounded-full uppercase inline-block">
                         🏛️ અમારું ભવિષ્યનું વિઝન (Future Vision)
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-black mt-4 mb-4 leading-tight">
+                    <h2 class="text-2xl sm:text-4xl font-black mt-4 mb-3 leading-tight">
                         આપણા સૌના સાથ-સહકારથી ભવ્ય ગૌશાળા અને પશુ આશ્રમનું નિર્માણ!
                     </h2>
-                    <p class="text-emerald-100 text-base sm:text-lg leading-relaxed mb-6">
-                        આજે આપણે શેરીએ-શેરીએ ફરીને સેવા કરીએ છીએ, પરંતુ આપણું લક્ષ્ય ગુજરાતના દરેક જિલ્લા અને ગામડામાં એક મજબૂત <strong>જીવસેવક ટીમ</strong> ઉભી કરવાનું અને ભવિષ્યમાં અનાથ, બિમાર કે ઘાયલ પશુઓ માટે <strong>આપણી પોતાની ગૌશાળા અને રેસ્ક્યુ સેન્ટર</strong> શરૂ કરવાનું છે.
+                    <p class="text-emerald-100 text-sm sm:text-lg leading-relaxed mb-6">
+                        આપણું લક્ષ્ય ગુજરાતના દરેક જિલ્લા અને ગામડામાં એક મજબૂત <strong>જીવસેવક ટીમ</strong> ઉભી કરવાનું અને ભવિષ્યમાં અનાથ, બિમાર કે ઘાયલ પશુઓ માટે <strong>આપણી પોતાની ગૌશાળા અને રેસ્ક્યુ સેન્ટર</strong> શરૂ કરવાનું છે.
                     </p>
-                    <div class="space-y-3 mb-8 text-sm sm:text-base">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 text-xl"></i>
-                            <span><strong>દરેક ગામમાં જીવસેવક ગ્રુપ:</strong> ગામના યુવાનો અને વડીલો ભેગા મળીને ફ્રી સેવા કરે.</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 text-xl"></i>
-                            <span><strong>બાળકોમાં સંસ્કાર સિંચન:</strong> નાનપણથી જ બાળકોને સાથે રાખીને દયા અને કર્મના પાઠ શીખવવા.</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 text-xl"></i>
-                            <span><strong>વેપાર-ધંધામાં બરકત:</strong> દુકાન કે બિઝનેસના નામે સેવા કરનારનું Instagram પર ફ્રી પ્રમોશન!</span>
-                        </div>
-                    </div>
-                    <a href="#join" class="inline-block bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-8 py-4 rounded-xl shadow-xl transition text-base sm:text-lg">
+                    <a href="#join" class="inline-block bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-7 py-3.5 rounded-xl shadow-xl transition text-sm sm:text-base">
                         આ મહા-અભિયાનમાં ભાગીદાર બનો 🤝
                     </a>
                 </div>
 
-                <!-- Emotional Slogans Showcase Box -->
                 <div class="space-y-4">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border-l-4 border-amber-400">
-                        <h4 class="text-amber-300 font-extrabold text-lg mb-1">✨ કર્મનો સિદ્ધાંત</h4>
-                        <p class="text-sm sm:text-base text-emerald-50">"તમે કરેલી નાની સેવા ક્યારેય વ્યર્થ જતી નથી; અબોલ જીવના પેટમાં ગયેલો એક-એક દાણો તમારા સંતાનોના ભવિષ્યનું રક્ષણ કરે છે."</p>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border-l-4 border-amber-400">
+                        <h4 class="text-amber-300 font-extrabold text-base sm:text-lg mb-1">✨ કર્મનો સિદ્ધાંત</h4>
+                        <p class="text-xs sm:text-sm text-emerald-50">"તમે કરેલી નાની સેવા ક્યારેય વ્યર્થ જતી નથી; અબોલ જીવના પેટમાં ગયેલો એક-એક દાણો તમારા સંતાનોના ભવિષ્યનું રક્ષણ કરે છે."</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border-l-4 border-orange-400">
-                        <h4 class="text-orange-300 font-extrabold text-lg mb-1">🎂 જન્મદિવસ અને શુભ પ્રસંગે સેવા</h4>
-                        <p class="text-sm sm:text-base text-emerald-50">"જન્મદિવસ, લગ્નતિથિ કે વડીલોની સ્મૃતિમાં ખોટા ખર્ચ કરવાને બદલે મૂગા જીવોને શીરો, કેળા કે ચણ ખવડાવીને સાચા આશીર્વાદ મેળવો."</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border-l-4 border-emerald-400">
-                        <h4 class="text-emerald-300 font-extrabold text-lg mb-1">🎥 તમારો વિડિયો, લાખો લોકોની પ્રેરણા</h4>
-                        <p class="text-sm sm:text-base text-emerald-50">"ઘર પાસે સેવા કરીને WhatsApp પર વિડિયો મોકલો — અમે તેને Instagram Reels માં મૂકીને તમને પ્રોત્સાહન આપીશું!"</p>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border-l-4 border-orange-400">
+                        <h4 class="text-orange-300 font-extrabold text-base sm:text-lg mb-1">🎂 જન્મદિવસ અને શુભ પ્રસંગે સેવા</h4>
+                        <p class="text-xs sm:text-sm text-emerald-50">"જન્મદિવસ, લગ્નતિથિ કે બિઝનેસના નામે મૂગા જીવોને શીરો, કેળા કે ચણ ખવડાવીને સાચા આશીર્વાદ મેળવો."</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. QR CODE SEVA GENERATOR (₹10, ₹20, ₹50, ₹100 Transparent Seva) -->
-    <section id="qrcode-section" class="py-16 bg-gradient-to-b from-amber-50 to-orange-50/60 px-4 border-y border-orange-200">
-        <div class="container mx-auto max-w-5xl">
-            <div class="bg-white rounded-3xl shadow-2xl border-2 border-orange-300 p-6 sm:p-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <!-- 9. QR CODE SEVA GENERATOR -->
+    <section id="qrcode-section" class="py-14 sm:py-20 bg-gradient-to-b from-amber-50 to-orange-50/60 px-4 border-y border-orange-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white rounded-3xl shadow-2xl border-2 border-orange-300 p-5 sm:p-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     
                     <div>
-                        <span class="bg-orange-600 text-white text-xs font-extrabold px-4 py-1.5 rounded-full uppercase">
+                        <span class="bg-orange-600 text-white text-xs font-extrabold px-4 py-1.5 rounded-full uppercase inline-block">
                             🔒 ૧૦૦% પારદર્શક ડિજિટલ સેવા
                         </span>
-                        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-3">
+                        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mt-3 mb-3">
                             ઓછામાં ઓછા ₹10, ₹20, ₹50 કે ₹100 ની સેવા કરો!
                         </h2>
-                        <p class="text-slate-600 mb-6 leading-relaxed text-sm sm:text-base">
+                        <p class="text-slate-600 mb-5 leading-relaxed text-xs sm:text-base">
                             અહીં તમારો <strong>૧૦ રૂપિયાનો સહયોગ પણ ખોટા માર્ગે નહીં જાય!</strong> નીચેમાંથી રકમ પસંદ કરી QR સ્કેન કરો અને WhatsApp પર તમારું નામ મોકલો — તમારા નામ અને સેવાનો વિડિયો આપણા Instagram (<strong>@jivsevak</strong>) પર મૂકવામાં આવશે.
                         </p>
 
-                        <label class="block text-sm font-extrabold text-slate-800 mb-2">👇 સેવાની રકમ પસંદ કરો (Click to Select):</label>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                            <button type="button" onclick="selectSevaAmount(10, '૧૦ રૂ. - પક્ષી ચણ દાણા સેવા')" id="btn-10" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-3 px-3 rounded-2xl shadow transition text-center">
-                                <span class="text-2xl text-orange-600 block">₹10</span>
-                                <span class="text-xs text-slate-500">પક્ષી દાણા</span>
+                        <label class="block text-xs sm:text-sm font-extrabold text-slate-800 mb-2">👇 સેવાની રકમ પસંદ કરો:</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-5">
+                            <button type="button" onclick="selectSevaAmount(10, '૧૦ રૂ. - પક્ષી ચણ દાણા સેવા')" id="btn-10" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-2.5 px-2 rounded-2xl shadow transition text-center">
+                                <span class="text-xl text-orange-600 block">₹10</span>
+                                <span class="text-[11px] text-slate-500">પક્ષી દાણા</span>
                             </button>
-                            <button type="button" onclick="selectSevaAmount(20, '૨૦ રૂ. - ગલુડિયા દૂધ-રોટલી સેવા')" id="btn-20" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-3 px-3 rounded-2xl shadow transition text-center">
-                                <span class="text-2xl text-orange-600 block">₹20</span>
-                                <span class="text-xs text-slate-500">દૂધ-રોટલી</span>
+                            <button type="button" onclick="selectSevaAmount(20, '૨૦ રૂ. - ગલુડિયા દૂધ-રોટલી સેવા')" id="btn-20" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-2.5 px-2 rounded-2xl shadow transition text-center">
+                                <span class="text-xl text-orange-600 block">₹20</span>
+                                <span class="text-[11px] text-slate-500">દૂધ-રોટલી</span>
                             </button>
-                            <button type="button" onclick="selectSevaAmount(50, '૫૦ રૂ. - શ્વાન શીરો & વાનર કેળા સેવા')" id="btn-50" class="amt-btn bg-orange-600 text-white border-2 border-orange-600 font-extrabold py-3 px-3 rounded-2xl shadow-lg transition text-center scale-105">
-                                <span class="text-2xl block">₹50</span>
-                                <span class="text-xs text-orange-100">શીરો / કેળા</span>
+                            <button type="button" onclick="selectSevaAmount(50, '૫૦ રૂ. - શ્વાન શીરો & વાનર કેળા સેવા')" id="btn-50" class="amt-btn bg-orange-600 text-white border-2 border-orange-600 font-extrabold py-2.5 px-2 rounded-2xl shadow-lg transition text-center">
+                                <span class="text-xl block">₹50</span>
+                                <span class="text-[11px] text-orange-100">શીરો / કેળા</span>
                             </button>
-                            <button type="button" onclick="selectSevaAmount(100, '૧૦૦ રૂ. - ચકલી માળા / મેડિકલ / ગૌસેવા')" id="btn-100" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-3 px-3 rounded-2xl shadow transition text-center">
-                                <span class="text-2xl text-orange-600 block">₹100</span>
-                                <span class="text-xs text-slate-500">માળા / દવા</span>
+                            <button type="button" onclick="selectSevaAmount(100, '૧૦૦ રૂ. - ચકલી માળા / મેડિકલ / ગૌસેવા')" id="btn-100" class="amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-2.5 px-2 rounded-2xl shadow transition text-center">
+                                <span class="text-xl text-orange-600 block">₹100</span>
+                                <span class="text-[11px] text-slate-500">માળા / દવા</span>
                             </button>
                         </div>
 
-                        <div class="bg-emerald-50 border border-emerald-300 rounded-2xl p-4 mb-6">
-                            <p id="selected-seva-text" class="text-emerald-950 font-extrabold text-sm sm:text-base">
+                        <div class="bg-emerald-50 border border-emerald-300 rounded-2xl p-3.5 mb-5">
+                            <p id="selected-seva-text" class="text-emerald-950 font-extrabold text-xs sm:text-sm">
                                 ✅ પસંદ કરેલ સેવા: ₹50 (૫૦ રૂ. - શ્વાન શીરો & વાનર કેળા સેવા)
                             </p>
-                            <p class="text-xs text-emerald-700 mt-1 font-semibold">
-                                * ગેરેન્ટી: આ રકમનો ૧૦૦% ઉપયોગ માત્ર અબોલ જીવોના ખોરાક અને દવામાં જ થશે.
-                            </p>
                         </div>
 
-                        <a href="https://chat.whatsapp.com/HHj0iQsahDM5B9n" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-4 px-6 rounded-2xl shadow-xl transition flex items-center justify-center gap-3 text-base sm:text-lg">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp ગ્રુપમાં નામ અને વિડિયો મોકલો
+                        <a href="https://chat.whatsapp.com/HHj0iQsahDM5B9n" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3.5 px-5 rounded-2xl shadow-xl transition flex items-center justify-center gap-2 text-sm sm:text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp ગ્રુપમાં નામ અને વિડિયો મોકલો
                         </a>
                     </div>
 
                     <!-- QR Code Box -->
                     <div class="flex justify-center">
-                        <div class="bg-stone-50 p-6 sm:p-8 rounded-3xl shadow-xl border-4 border-emerald-800 text-center max-w-sm w-full">
-                            <div class="flex items-center justify-center space-x-2.5 mb-4">
+                        <div class="bg-stone-50 p-5 sm:p-7 rounded-3xl shadow-xl border-4 border-emerald-800 text-center max-w-xs w-full">
+                            <div class="flex items-center justify-center gap-2.5 mb-3">
                                 <img src="jivsevaklogo.jpg" 
                                      onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff';" 
-                                     alt="Logo" class="w-11 h-11 rounded-full object-cover border-2 border-orange-500">
+                                     alt="Logo" class="nav-logo-lock border-2 border-orange-500">
                                 <div class="text-left">
-                                    <h4 class="font-black text-emerald-950 leading-none text-lg">જીવસેવક પરિવાર ટ્રસ્ટ</h4>
-                                    <span class="text-xs text-orange-600 font-bold">Official Verified Seva QR</span>
+                                    <h4 class="font-black text-emerald-950 leading-none text-base">જીવસેવક પરિવાર</h4>
+                                    <span class="text-[11px] text-orange-600 font-bold">Official Verified Seva QR</span>
                                 </div>
                             </div>
 
-                            <div class="bg-white p-4 rounded-2xl border-2 border-dashed border-orange-400 inline-block mb-4 relative shadow-inner">
-                                <img id="dynamic-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://instagram.com/jivsevak" alt="Seva QR Code" class="w-52 h-52 mx-auto rounded-lg">
-                                <img src="jivsevaklogo.jpg" onerror="this.style.display='none'" alt="Logo" class="w-11 h-11 rounded-full border-2 border-white shadow-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover">
+                            <div class="bg-white p-3 rounded-2xl border-2 border-dashed border-orange-400 inline-block mb-3 relative">
+                                <img id="dynamic-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://instagram.com/jivsevak" alt="Seva QR Code" class="w-44 h-44 mx-auto rounded-lg">
                             </div>
 
-                            <div id="qr-badge" class="bg-orange-100 text-orange-900 font-extrabold py-1.5 px-4 rounded-full text-sm mb-2 inline-block">
+                            <div id="qr-badge" class="bg-orange-100 text-orange-900 font-extrabold py-1 px-4 rounded-full text-xs mb-2 inline-block">
                                 સેવા રકમ: ₹50 | 100% પારદર્શક
                             </div>
 
-                            <p class="text-xs text-slate-500 leading-relaxed">
-                                સ્કેન કરીને જોડાવો — દરેક દાતા અને સેવકનું નામ Instagram પર પોસ્ટ કરવામાં આવશે! 🙏
+                            <p class="text-[11px] text-slate-500 leading-relaxed">
+                                સ્કેન કરીને જોડાવો — દરેક સેવકનું નામ Instagram પર પોસ્ટ કરવામાં આવશે! 🙏
                             </p>
                         </div>
                     </div>
@@ -636,37 +626,36 @@
     </section>
 
     <!-- 10. JOIN GUJARAT TEAM REGISTRATION FORM -->
-    <section id="join" class="py-16 md:py-24 px-4 container mx-auto">
-        <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-7 sm:p-12 border-2 border-emerald-600/30">
-            <div class="text-center mb-8">
-                <img src="jivsevaklogo.jpg" 
-                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff';" 
-                     alt="Logo" class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-orange-500 object-cover shadow-md">
-                <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-4 py-1 rounded-full uppercase">
+    <section id="join" class="py-14 sm:py-20 px-4 max-w-7xl mx-auto">
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-6 sm:p-10 border-2 border-emerald-600/30">
+            <div class="text-center mb-6">
+                <div class="flex justify-center mb-2">
+                    <img src="jivsevaklogo.jpg" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff';" 
+                         alt="Logo" class="nav-logo-lock border-2 border-orange-500 shadow-md">
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3.5 py-1 rounded-full uppercase inline-block">
                     ગુજરાત City & ગામડા ટીમ રજીસ્ટ્રેશન
                 </span>
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+                <h2 class="text-xl sm:text-3xl font-black text-slate-900 mt-2">
                     જીવસેવક પરિવારમાં આજથી જ જોડાવો 🙏
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-1">
-                    તમારા ગામ/શહેરમાં ફ્રી સેવા કરવા, ચકલીના માળા લગાવવા કે જન્મદિવસ/બિઝનેસ નિમિત્તે સેવા નોંધાવવા ફોર્મ ભરો:
-                </p>
             </div>
 
-            <form id="gujaratForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <form id="gujaratForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-extrabold text-slate-700 mb-1">તમારું પૂરું નામ (અથવા બિઝનેસનું નામ - Instagram પોસ્ટ માટે) *</label>
-                    <input type="text" id="fname" required placeholder="દા.ત. રમેશભાઈ પટેલ / શ્રીજી એન્ટરપ્રાઈઝ" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold">
+                    <label class="block text-xs sm:text-sm font-extrabold text-slate-700 mb-1">તમારું પૂરું નામ (અથવા બિઝનેસનું નામ) *</label>
+                    <input type="text" id="fname" required placeholder="દા.ત. રમેશભાઈ પટેલ" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold text-sm">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-extrabold text-slate-700 mb-1">WhatsApp મોબાઇલ નંબર *</label>
-                        <input type="tel" id="fphone" required placeholder="9876543210" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold">
+                        <label class="block text-xs sm:text-sm font-extrabold text-slate-700 mb-1">WhatsApp મોબાઇલ નંબર *</label>
+                        <input type="tel" id="fphone" required placeholder="9876543210" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-extrabold text-slate-700 mb-1">તમારો જિલ્લો / City *</label>
-                        <select id="fdistrict" required class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold">
+                        <label class="block text-xs sm:text-sm font-extrabold text-slate-700 mb-1">તમારો જિલ્લો / City *</label>
+                        <select id="fdistrict" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold text-sm">
                             <option value="">-- જિલ્લો પસંદ કરો --</option>
                             <option value="Gandhinagar">ગાંધીનગર (Gandhinagar)</option>
                             <option value="Ahmedabad">અમદાવાદ (Ahmedabad)</option>
@@ -676,69 +665,63 @@
                             <option value="Mehsana">મહેસાણા (Mehsana)</option>
                             <option value="Sabarkantha">સાબરકાંઠા (Sabarkantha)</option>
                             <option value="Banaskantha">બનાસકાંઠા (Banaskantha)</option>
-                            <option value="Anand">આણંદ / ખેડા</option>
-                            <option value="Bhavnagar">ભાવનગર / અમરેલી</option>
-                            <option value="Jamnagar">જામનગર / જૂનાગઢ</option>
-                            <option value="Kutch">કચ્છ / ભુજ</option>
                             <option value="Other">અન્ય ગુજરાત City / ગામ</option>
                         </select>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-extrabold text-slate-700 mb-1">તમારા ગામ કે સોસાયટી/એરિયાનું નામ *</label>
-                    <input type="text" id="fvillage" required placeholder="તમારા ગામ અથવા વિસ્તારનું નામ લખો" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold">
+                    <label class="block text-xs sm:text-sm font-extrabold text-slate-700 mb-1">તમારા ગામ કે સોસાયટી/એરિયાનું નામ *</label>
+                    <input type="text" id="fvillage" required placeholder="તમારા ગામ અથવા વિસ્તારનું નામ લખો" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold text-sm">
                 </div>
 
                 <div>
-                    <label class="block text-sm font-extrabold text-slate-700 mb-1">તમે કઈ સેવામાં જોડાવા માંગો છો? *</label>
-                    <select id="fsevatype" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold">
-                        <option value="Local Team Volunteer">મારા ગામ/City માં ફ્રી સેવા ટીમમાં જોડાવું છે (Volunteer)</option>
-                        <option value="10-20-50-100 Rs Transparent Seva">₹10, ₹20, ₹50 કે ₹100 ની પારદર્શક સેવા (IG પર નામ & વિડિયો)</option>
+                    <label class="block text-xs sm:text-sm font-extrabold text-slate-700 mb-1">તમે કઈ સેવામાં જોડાવા માંગો છો? *</label>
+                    <select id="fsevatype" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-semibold text-sm">
+                        <option value="Local Team Volunteer">મારા ગામ/City માં ફ્રી સેવા ટીમમાં જોડાવું છે</option>
+                        <option value="10-20-50-100 Rs Transparent Seva">₹10, ₹20, ₹50 કે ₹100 ની પારદર્શક સેવા</option>
                         <option value="Chakli Mala & Pakshi Dana">ગોલ ૧ & ૨: ચકલીના માળા અને પક્ષી દાણા સેવા</option>
-                        <option value="Dog Shiro Medicine & Gauseva">ગોલ ૩: શ્વાન શીરો/દવા, વાનર કેળા અને ગૌશાળા સંકલ્પ</option>
-                        <option value="Business Barkat Seva">મારા બિઝનેસ/દુકાનના નામે નિયમિત સેવા કરવી છે</option>
-                        <option value="Birthday / Prasang Seva">જન્મદિવસ કે શુભ પ્રસંગ નિમિત્તે સેવા કરવી છે</option>
+                        <option value="Dog Shiro Medicine & Gauseva">ગોલ ૩: શ્વાન શીરો/દવા અને ગૌશાળા સંકલ્પ</option>
+                        <option value="Birthday / Prasang Seva">જન્મદિવસ કે બિઝનેસ નિમિત્તે સેવા કરવી છે</option>
                     </select>
                 </div>
 
-                <button type="submit" class="w-full bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black py-4 rounded-xl shadow-xl transition text-lg">
+                <button type="submit" class="w-full bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-black py-3.5 rounded-xl shadow-xl transition text-base">
                     સબમિટ કરો & જીવસેવક પરિવારમાં જોડાવો 🐾
                 </button>
             </form>
 
-            <div id="successAlert" class="hidden mt-6 p-5 bg-emerald-100 border-2 border-emerald-600 text-emerald-950 rounded-2xl text-center font-bold">
-                🙏 ખૂબ ખૂબ ધન્યવાદ! તમારી વિગતો જીવસેવક પરિવાર ટ્રસ્ટમાં નોંધાઈ ગઈ છે. અબોલ જીવોના આશીર્વાદ સદાય તમારા પરિવાર પર રહે!
+            <div id="successAlert" class="hidden mt-5 p-4 bg-emerald-100 border-2 border-emerald-600 text-emerald-950 rounded-2xl text-center font-bold text-sm">
+                🙏 ખૂબ ખૂબ ધન્યવાદ! તમારી વિગતો જીવસેવક પરિવાર ટ્રસ્ટમાં નોંધાઈ ગઈ છે!
             </div>
         </div>
     </section>
 
-    <!-- 11. PROFESSIONAL TRUST FOOTER -->
-    <footer class="bg-slate-950 text-slate-300 py-12 px-4 text-center border-t-4 border-orange-500">
-        <div class="container mx-auto max-w-4xl">
-            <div class="flex justify-center mb-4">
+    <!-- 11. FOOTER -->
+    <footer class="bg-slate-950 text-slate-300 py-10 px-4 text-center border-t-4 border-orange-500">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center mb-3">
                 <img src="jivsevaklogo.jpg" 
                      onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=JS&background=ea580c&color=fff';" 
-                     alt="JivSevak Logo" class="w-20 h-20 rounded-full border-2 border-amber-400 object-cover shadow-xl">
+                     alt="JivSevak Logo" class="nav-logo-lock border-2 border-amber-400 shadow-xl">
             </div>
-            <h3 class="text-2xl sm:text-3xl font-black text-white mb-1">જીવસેવક પરિવાર (JivSevak Family) 🐾</h3>
-            <p class="text-sm sm:text-base text-amber-400 mb-6 font-bold">🙏 સેવા • 💖 શ્રદ્ધા • 🤝 વિશ્વાસ | 365 દિવસ અબોલ જીવ સેવા અભિયાન</p>
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-1">જીવસેવક પરિવાર (JivSevak Family) 🐾</h3>
+            <p class="text-xs sm:text-sm text-amber-400 mb-5 font-bold">🙏 સેવા • 💖 શ્રદ્ધા • 🤝 વિશ્વાસ | 365 દિવસ અબોલ જીવ સેવા અભિયાન</p>
             
-            <div class="flex justify-center space-x-6 mb-8 text-3xl">
+            <div class="flex justify-center space-x-6 mb-6 text-2xl">
                 <a href="https://instagram.com/jivsevak" target="_blank" aria-label="Instagram" class="text-pink-500 hover:scale-110 transition"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://chat.whatsapp.com/HHj0iQsahDM5B9n" target="_blank" aria-label="WhatsApp" class="text-emerald-500 hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#home" aria-label="Facebook" class="text-blue-500 hover:scale-110 transition"><i class="fa-brands fa-facebook"></i></a>
             </div>
             
-            <p class="text-xs text-slate-500 border-t border-slate-800 pt-6">
-                © 2026 JivSevak Family Gujarat. All Rights Reserved. | 100% પારદર્શક અબોલ જીવ સેવા.
+            <p class="text-[11px] text-slate-500 border-t border-slate-800 pt-5">
+                © 2026 JivSevak Family Gujarat. All Rights Reserved.
             </p>
         </div>
     </footer>
 
     <!-- Interactive Script -->
     <script>
-        // Mobile Menu Toggle & Auto-Close on Link Click
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -753,24 +736,22 @@
             });
         });
 
-        // Dynamic QR Code Seva Amount Selector
         function selectSevaAmount(amount, desc) {
             document.getElementById('selected-seva-text').innerText = `✅ પસંદ કરેલ સેવા: ₹${amount} (${desc})`;
             document.getElementById('qr-badge').innerText = `સેવા રકમ: ₹${amount} | 100% પારદર્શક`;
 
             const qrImg = document.getElementById('dynamic-qr');
             const qrData = encodeURIComponent(`JivSevak Family Seva - Rs.${amount} (${desc}) - Instagram @jivsevak`);
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${qrData}`;
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${qrData}`;
 
             const allBtns = document.querySelectorAll('.amt-btn');
             allBtns.forEach(btn => {
-                btn.className = "amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-3 px-3 rounded-2xl shadow transition text-center";
+                btn.className = "amt-btn bg-white hover:bg-orange-50 border-2 border-orange-400 text-slate-900 font-extrabold py-2.5 px-2 rounded-2xl shadow transition text-center";
             });
             const activeBtn = document.getElementById(`btn-${amount}`);
-            activeBtn.className = "amt-btn bg-orange-600 text-white border-2 border-orange-600 font-extrabold py-3 px-3 rounded-2xl shadow-lg transition text-center scale-105";
+            activeBtn.className = "amt-btn bg-orange-600 text-white border-2 border-orange-600 font-extrabold py-2.5 px-2 rounded-2xl shadow-lg transition text-center";
         }
 
-        // Form Submission Alert
         function handleFormSubmit(e) {
             e.preventDefault();
             document.getElementById('successAlert').classList.remove('hidden');
